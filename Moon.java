@@ -1,8 +1,6 @@
 package solarSystem;
 
-
-
-public class Planet extends OrbitCalculations{
+public class Moon {
 	
 	private int size;
 	private int [] center = new int[2];
@@ -10,14 +8,12 @@ public class Planet extends OrbitCalculations{
 	private int speed;
 	private double orbitRadius;
 	private int [] centerOrbit = new int[2];
-	private Moon moon = new Moon();
 	
-	
-	public Planet() {
+	public Moon() {
 		
 	}
 	
-	public Planet(int size, int orbitRadius, int [] centerOrbit, int speed) {
+	public Moon(int size, int orbitRadius, int [] centerOrbit, int speed) {
 		this.size = size;
 		this.center[0] = centerOrbit[0] + orbitRadius;
 		this.center[1] = centerOrbit[1];
@@ -44,12 +40,5 @@ public class Planet extends OrbitCalculations{
 		return this.size;
 	}
 	
-	public void setMoon(int size, int orbitRadius, int speed) {
-		this.moon = new Moon(size, orbitRadius, center, speed);
-	}
-	
-	public Moon getMoon() {
-		return this.moon;
-	}
-	
+
 }
